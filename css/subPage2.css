@@ -1,0 +1,1179 @@
+html {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* img {
+    pointer-events: none;
+} */
+
+body {
+    width: 100%;
+    height: auto;
+    background-color: #021531;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/********************************************************
+                        header
+********************************************************/
+header {
+    position: relative;
+    z-index: 99;
+}
+
+header #header-wrap {
+    height: 90px;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    position: fixed;
+    background-color: #021531;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+
+/* nav */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Logo a {
+    width: 100%;
+    z-index: 100;
+    /* height: 80px; */
+}
+
+.Logo img {
+    width: 80px;
+    margin-left: 140px;
+}
+
+.menu {
+    display: flex;
+    padding-left: 0;
+    margin-right: 140px;
+}
+
+.menu>li>a {
+    color: #fff;
+    font-family: 'NanumSquare';
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 8px 30px;
+    text-decoration: none;
+
+    transition: all 0.4s;
+}
+
+/* 내비게이션 마우스 오버 시 */
+.menu>li>a:hover,
+.menu>li>a:focus,
+.menu>li>a.on {
+    color: #E84191;
+    text-decoration: none;
+}
+
+
+/********************************************************
+                    main section
+********************************************************/
+
+#section-wrap {
+    position: relative;
+    width: 100%;
+    height: 3400px;
+    top: 110px;
+    left: 0;
+}
+
+#section-wrap #sweetPotato {
+    position: absolute;
+    width: 100%;
+}
+
+.animation span {
+    font-weight: bold;
+    display: inline-block;
+}
+
+/********************************************************
+                title-text Animation
+********************************************************/
+
+.title-text {
+    position: relative;
+    width: 300px;
+    margin-top: 100px;
+    margin-left: 7%;
+
+    color: #E84191;
+    font-family: 'Cafe24Ssurround';
+    font-size: 45px;
+    padding-bottom: 9px;
+}
+
+.title-text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.title-text:hover::after {
+    width: 330px;
+}
+
+.title-text span {
+    opacity: 0;
+    margin-right: -8px;
+    transform: translate(0, 0) rotate(0);
+}
+
+.title-text span:nth-of-type(1) {
+    animation: if 1s forwards;
+}
+
+.title-text span:nth-of-type(2) {
+    animation: if 1s forwards;
+}
+
+.title-text span:nth-of-type(3) {
+    animation: if 1s forwards;
+}
+
+.title-text span:nth-of-type(4) {
+    animation: question-mark 1s forwards;
+}
+
+
+.title-text span:nth-of-type(1) {
+    animation-delay: .2s;
+}
+
+.title-text span:nth-of-type(2) {
+    animation-delay: .25s;
+}
+
+.title-text span:nth-of-type(3) {
+    animation-delay: .35s;
+}
+
+.title-text span:nth-of-type(4) {
+    animation-delay: .45s;
+}
+
+@keyframes if {
+    0% {
+        transform: translate(0, 0) rotate(0);
+        opacity: 0;
+    }
+
+    20% {
+        transform: translate(0, -70px) rotate(360deg);
+        opacity: 1;
+        color: #fff;
+    }
+
+    50% {
+        transform: translate(0, 0) rotate(360deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes question-mark {
+    0% {
+        transform: translate(0, 0) rotate(0);
+        opacity: 0;
+    }
+
+    20% {
+        transform: translate(0, -70px) rotate(360deg);
+        opacity: 1;
+        color: #fff;
+    }
+
+    50% {
+        transform: translate(0, 0) rotate(360deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(390deg);
+        opacity: 1;
+    }
+}
+
+/********************************************************
+                            if
+********************************************************/
+#if {
+    position: relative;
+    width: 100%;
+    top: 150px;
+    left: 0;
+    text-align: center;
+    /* background-color: #fff; */
+}
+
+.what-if {
+    position: absolute;
+    width: 86%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.what-if h1 {
+    margin-top: 100px;
+    opacity: 0;
+    transform: rotateX(0);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'NanumSquare';
+    color: #fff;
+    animation: what-if 1.5s forwards;
+}
+
+.what-if h1:nth-of-type(1) {
+    animation-delay: 1.25s;
+}
+
+.what-if .what-if-2>img {
+    width: 370px;
+    margin-top: 90px;
+    opacity: 0;
+    animation: Potato .7s forwards;
+}
+
+.what-if .what-if-2>img:nth-of-type(1) {
+    animation-delay: .75s;
+}
+
+.what-if-2 p {
+    margin-top: 60px;
+    opacity: 0;
+    font-size: 24px;
+    /* font-weight: bold; */
+    font-family: 'NanumSquare';
+    color: #fff;
+    animation: if-explain 1.5s forwards;
+}
+
+.what-if-2>p:nth-of-type(1) {
+    animation-delay: 1.75s;
+}
+
+@keyframes Potato {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes what-if {
+    0% {
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+
+    20% {
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes if-explain {
+    0% {
+        transform: translateY(-30px);
+        color: #F0EA76;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        color: #fff;
+        opacity: 1;
+    }
+}
+
+/********************************************************
+                        if-img
+********************************************************/
+#if-img-wrap {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 86%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#if-img-wrap .padding>p {
+    position: relative;
+    font-size: 24px;
+    /* font-weight: bold; */
+    font-family: 'NanumSquare';
+    color: #fff;
+    top: 160px;
+}
+
+.padding {
+    padding: 0 40px 0 40px;
+}
+
+.img-hidden {
+    position: relative;
+    overflow: hidden;
+    top: 140px;
+    width: 320px;
+    height: 200px;
+    border: solid 2px #fff;
+    border-radius: 20px;
+}
+
+/* .img-hidden .scale {
+    width: 320px;
+    height: 200px;
+} */
+
+/* 이미지 크기 */
+.img-hidden .scale img {
+    position: absolute;
+    width: 360px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.scale {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.scale:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+
+
+
+/********************************************************
+                    Imagination-wrap
+********************************************************/
+
+#Imagination-wrap {
+    position: relative;
+    top: 540px;
+    width: 100%;
+    color: #fff;
+    font-family: 'NanumSquare';
+    text-align: center;
+    /* height: 100px; */
+    /* background-color: #F0EA76; */
+}
+
+.Imagination>h2 {
+    padding-top: 60px;
+    font-size: 30px;
+    font-family: 'Cafe24Ssurround';
+    transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+.Imagination>h2:hover {
+    transform: scale(1.2);
+    color: #F0EA76;
+}
+
+.Imagination>p {
+    padding-top: 60px;
+    font-size: 30px;
+}
+
+.earth {
+    margin-top: 100px;
+}
+
+.Imagination .Destruction {
+    position: relative;
+    top: 400px;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.Imagination .Destruction>p {
+    font-family: 'KBO-Dia-Gothic_bold';
+    font-size: 120px;
+    color: #af1919;
+    animation: Destruction 1.5s infinite ease-in-out;
+}
+
+.Imagination>ul {
+    position: relative;
+    top: 840px;
+    text-align: left;
+}
+
+.Imagination>ul li {
+    line-height: 1.5;
+}
+
+.Imagination>ul .reason {
+    padding-bottom: 30px;
+    font-size: 34px;
+    font-family: 'Cafe24Ssurround';
+}
+
+.Imagination>ul .cause {
+    font-size: 20px;
+}
+
+
+@keyframes Destruction {
+    0% {
+        color: #af1919;
+    }
+
+    50% {
+        color: #fff;
+    }
+
+    100% {
+        color: #af1919;
+    }
+}
+
+
+/********************************************************
+                        section 2
+********************************************************/
+
+#section-wrap-2 {
+    position: relative;
+    width: 100%;
+    height: 2400px;
+    top: 0px;
+    left: 0;
+    color: #fff;
+    font-family: 'NanumSquare';
+}
+
+
+#section-wrap-2 .however {
+    position: absolute;
+    margin-top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 86%;
+    text-align: center;
+    padding-top: 180px;
+}
+
+
+#section-wrap-2 .reversal {
+    font-family: 'Cafe24Ssurround';
+    font-size: 54px;
+    color: #fff;
+    animation: bounce .4s ease-in infinite alternate;
+}
+
+.however>p {
+    margin-top: 80px;
+    font-size: 26px;
+}
+
+.however>p>span {
+    font-size: 20px;
+    color: #F8B40D;
+}
+
+.however .moon {
+    position: absolute;
+    top: 380px;
+    left: 100px;
+    width: 100px;
+    animation: answer 3s ease-in-out infinite;
+}
+
+.however .sleep {
+    position: absolute;
+    top: 780px;
+    right: 100px;
+    width: 120px;
+    transform: rotate(45deg);
+    animation: question 2s ease-in-out infinite;
+}
+
+.change {
+    position: absolute;
+    width: 100%;
+    top: 800px;
+}
+
+.change .reason {
+    width: 580px;
+    margin: 0 auto;
+    font-family: 'Cafe24Ssurround';
+    font-size: 40px;
+    line-height: 1.8;
+    border-bottom: 1px solid #fff;
+}
+
+.change>ul {
+    position: relative;
+    top: 200px;
+}
+
+.change>ul li {
+    line-height: 1.5;
+}
+
+.change>ul .cause {
+    font-size: 20px;
+    padding-bottom: 200px;
+}
+
+.bold {
+    color: #F8B40D;
+    line-height: 2;
+    font-size: 50px;
+    font-family: 'Cafe24Ssurround';
+    text-shadow: 1px 0 0 #ffffff,
+        2px 0 0 #ffffff,
+        3px 0 0 #ffffff,
+        4px 0 0 #ffffff;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(0, -30px);
+        color: #0067B6;
+        text-shadow: 0 1px 0 #ffffff,
+            0 2px 0 #ffffff,
+            0 3px 0 #ffffff,
+            0 4px 0 #ffffff,
+            0 5px 0 #ffffff,
+            0 6px 0 #ffffff,
+            0 7px 0 #ffffff,
+            0 8px 0 #ffffff,
+            0 9px 0 #ffffff;
+    }
+}
+
+@keyframes answer {
+    0% {
+        transform: translate(0, -20px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, -20px);
+    }
+}
+
+@keyframes question {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/********************************************************
+                        footer
+********************************************************/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #021531;
+}
+
+#footer-box {
+    height: 100%;
+    text-align: center;
+}
+
+#address {
+    font-family: 'NanumSquareLight';
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    padding: 25px 0 0 0;
+    border-top: solid 1px #fff;
+}
+
+#address li {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#address li span {
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************
+                    반응형 (min-width: 390px)
+********************************************************/
+@media all and (min-width: 390px) {
+    #section-wrap {
+        height: 4200px;
+    }
+
+    /* 커뮤니티 타이틀 */
+    .title-text {
+        font-size: 35px;
+    }
+
+    .title-text:hover::after {
+        width: 240px;
+    }
+
+    /* 만약이란, 고구마 이미지 */
+    .what-if h1 {
+        font-size: 22px;
+    }
+
+    .what-if .what-if-2>img {
+        width: 300px;
+    }
+
+    .what-if-2 p {
+        font-size: 14px;
+    }
+
+    /* 만약에 ~ 있다면? */
+    #if-img-wrap {
+        position: absolute;
+        display: block;
+    }
+    
+    #if-img-wrap .padding>p {
+        font-size: 20px;
+    }
+    
+    .padding {
+        padding: 80px 0 80px 0;
+    }
+    
+    .img-hidden {
+        width: 100%;
+        height: 200px;
+    }
+    
+    /* 이미지 크기 */
+    .img-hidden .scale img {
+        width: 100%;
+    }
+
+    #Imagination-wrap {
+        top: 1440px;
+    }
+
+    .Imagination>h2 {
+        padding-top: 60px;
+        font-size: 20px;
+    }
+    
+    .Imagination>p {
+        padding-top: 60px;
+        font-size: 20px;
+    }
+    
+    .earth {
+        margin-top: 80px;
+        margin-left: -18px;
+    }
+    
+    .Imagination .Destruction>p {
+        font-size: 60px;
+    }
+    
+    /* 이유는 */
+    .Imagination>ul {
+        top: 840px;
+    }
+    
+    .Imagination>ul .reason {
+        padding-bottom: 30px;
+        font-size: 22px;
+    }
+    
+    .Imagination>ul .cause {
+        font-size: 14px;
+    }
+
+    /* section2 */
+    #section-wrap-2 {
+        height: 2000px;
+    }
+    
+    #section-wrap-2 .however {
+        margin-top: 110px;
+        padding-top: 180px;
+    }
+
+    #section-wrap-2 .reversal {
+        font-size: 24px;
+    }
+    
+    .however>p {
+        margin-top: 80px;
+        font-size: 18px;
+    }
+    
+    .however>p>span {
+        font-size: 14px;
+    }
+
+    .change {
+        position: absolute;
+        width: 100%;
+        top: 600px;
+    }
+
+    .change .reason {
+        width: 360px;
+        font-size: 28px;
+    }
+    
+    .change>ul {
+        position: relative;
+        top: 200px;
+    }
+    
+    .change>ul .cause {
+        font-size: 14px;
+        padding-bottom: 170px;
+    }
+    
+    .bold {
+        font-size: 40px;
+    }
+
+    .however .moon {
+        top: 380px;
+        left: 10px;
+    }
+    
+    .however .sleep {
+        top: 780px;
+        right: 10px;
+    }
+}
+
+
+/********************************************************
+                    반응형 (min-width: 768px)
+********************************************************/
+@media all and (min-width: 768px) {
+    #section-wrap {
+        height: 4200px;
+    }
+
+    /* 커뮤니티 타이틀 */
+    .title-text {
+        font-size: 40px;
+    }
+
+    .title-text:hover::after {
+        width: 300px;
+    }
+
+    /* 만약이란, 고구마 이미지 */
+    .what-if h1 {
+        font-size: 24px;
+    }
+
+    .what-if .what-if-2>img {
+        width: 320px;
+    }
+
+    .what-if-2 p {
+        font-size: 20px;
+    }
+
+
+    /* 만약에 ~ 있다면? */
+    #if-img-wrap {
+        position: absolute;
+        display: block;
+    }
+    
+    #if-img-wrap .padding>p {
+        font-size: 22px;
+    }
+    
+    .padding {
+        padding: 60px 0 60px 0;
+    }
+    
+    .img-hidden {
+        width: 100%;
+        height: 300px;
+    }
+    
+    /* 이미지 크기 */
+    .img-hidden .scale img {
+        width: 100%;
+    }
+
+    #Imagination-wrap {
+        top: 1640px;
+    }
+
+    .Imagination>h2 {
+        padding-top: 60px;
+        font-size: 24px;
+    }
+    
+    .Imagination>p {
+        padding-top: 60px;
+        font-size: 24px;
+    }
+    
+    .earth {
+        margin-top: 100px;
+    }
+
+    .Imagination .Destruction>p {
+        font-size: 100px;
+    }
+
+    /* 이유는 */
+    .Imagination>ul {
+        top: 840px;
+    }
+    
+    .Imagination>ul .reason {
+        padding-bottom: 30px;
+        font-size: 28px;
+    }
+    
+    .Imagination>ul .cause {
+        font-size: 16px;
+    }
+
+    /* section2 */
+    #section-wrap-2 {
+        height: 2200px;
+    }
+    
+    #section-wrap-2 .however {
+        margin-top: 300px;
+        padding-top: 180px;
+    }
+
+    #section-wrap-2 .reversal {
+        font-size: 31px;
+    }
+    
+    .however>p {
+        margin-top: 80px;
+        font-size: 22px;
+    }
+    
+    .however>p>span {
+        font-size: 18px;
+    }
+
+    .change {
+        position: absolute;
+        width: 100%;
+        top: 600px;
+    }
+
+    .change .reason {
+        width: 480px;
+        font-size: 34px;
+    }
+    
+    .change>ul {
+        position: relative;
+        top: 200px;
+    }
+    
+    .change>ul .cause {
+        font-size: 18px;
+        padding-bottom: 170px;
+    }
+    
+    .bold {
+        font-size: 40px;
+    }
+
+    .however .moon {
+        top: 380px;
+        left: 40px;
+    }
+    
+    .however .sleep {
+        top: 780px;
+        right: 40px;
+    }
+}
+
+
+/********************************************************
+                    반응형 (min-width: 1280px)
+********************************************************/
+@media all and (min-width: 1280px) {
+
+    #section-wrap {
+        height: 3400px;
+    }
+
+    /* 커뮤니티 타이틀 */
+    .title-text {
+        font-size: 45px;
+    }
+
+    .title-text:hover::after {
+        width: 330px;
+    }
+
+    /* 만약이란, 고구마 이미지 */
+    .what-if h1 {
+        font-size: 30px;
+    }
+
+    .what-if .what-if-2>img {
+        width: 370px;
+    }
+
+    .what-if-2 p {
+        font-size: 24px;
+    }
+
+
+    /* 만약에 ~ 있다면? */
+    #if-img-wrap {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #if-img-wrap .padding>p {
+        font-size: 24px;
+    }
+    
+    .padding {
+        padding: 0 40px 0 40px;
+    }
+    
+    .img-hidden {
+        width: 320px;
+        height: 200px;
+    }
+    
+    /* 이미지 크기 */
+    .img-hidden .scale img {
+        width: 360px;
+    }
+
+
+    #Imagination-wrap {
+        top: 540px;
+    }
+    
+    .Imagination>h2 {
+        padding-top: 60px;
+        font-size: 30px;
+    }
+    
+    .Imagination>p {
+        padding-top: 60px;
+        font-size: 30px;
+    }
+    
+    /* 지구 */
+    .earth {
+        margin-top: 100px;
+    }
+
+    /* 멸망 */
+    .Imagination .Destruction>p {
+        font-size: 120px;
+    }
+
+    /* 이유는 */
+    .Imagination>ul {
+        top: 840px;
+    }
+    
+    .Imagination>ul .reason {
+        padding-bottom: 30px;
+        font-size: 34px;
+    }
+    
+    .Imagination>ul .cause {
+        font-size: 20px;
+    }
+
+    /* section2 */
+    #section-wrap-2 {
+        height: 2400px;
+    }
+    
+    #section-wrap-2 .however {
+        margin-top: 110px;
+        padding-top: 180px;
+    }
+
+    #section-wrap-2 .reversal {
+        font-size: 54px;
+    }
+    
+    .however>p {
+        margin-top: 80px;
+        font-size: 26px;
+    }
+    
+    .however>p>span {
+        font-size: 20px;
+    }
+
+    .change {
+        position: absolute;
+        width: 100%;
+        top: 800px;
+    }
+
+    .change .reason {
+        width: 580px;
+        font-size: 40px;
+    }
+    
+    .change>ul {
+        position: relative;
+        top: 200px;
+    }
+    
+    .change>ul .cause {
+        font-size: 20px;
+        padding-bottom: 200px;
+    }
+    
+    .bold {
+        font-size: 50px;
+    }
+
+    .however .moon {
+        top: 380px;
+        left: 100px;
+    }
+    
+    .however .sleep {
+        top: 780px;
+        right: 100px;
+    }
+}
+
+
+/********************************************************
+                        font
+********************************************************/
+
+/* 나눔스퀘어 */
+/* font-family: 'NanumSquare';
+font-family: 'NanumSquareLight';
+font-family: 'NanumSquareExtraBold';
+font-family: 'NanumSquareBold';
+font-family: 'NanumSquareAcR';
+font-family: 'NanumSquareAcL';
+font-family: 'NanumSquareAcEB';
+font-family: 'NanumSquareAcB'; */
+
+
+/* 카페써라운드 */
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* KBO 다이아고딕체 */
+@font-face {
+    font-family: 'KBO-Dia-Gothic_bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}

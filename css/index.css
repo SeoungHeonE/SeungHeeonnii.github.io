@@ -1,0 +1,555 @@
+html {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    background-color: #021531;
+    overflow-x: hidden;
+    /* position: relative; */
+}
+
+/********************************************************
+                        header
+********************************************************/
+header {
+    position: relative;
+    z-index: 99;
+}
+
+header #header-wrap {
+    height: 90px;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    position: fixed;
+    background-color: #021531;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+
+/* nav */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Logo img {
+    width: 80px;
+    margin-left: 140px;
+}
+
+.menu {
+    display: flex;
+    padding-left: 0;
+    margin-right: 140px;
+}
+
+.menu>li>a {
+    color: #fff;
+    font-family: 'NanumSquare';
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 8px 30px;
+    text-decoration: none;
+
+    transition: all 0.4s;
+}
+
+/* 내비게이션 마우스 오버 시 */
+.menu>li>a:hover,
+.menu>li>a:focus,
+.menu>li>a.on {
+    color: #E84191;
+    text-decoration: none;
+}
+
+
+/********************************************************
+                    main section
+********************************************************/
+#main-section {
+    position: relative;
+    width: 100%;
+    top: 110px;
+    /* background-color: #fff; */
+}
+
+#main-section #animation-location {
+    position: absolute;
+    width: 100%;
+}
+
+
+.animation span {
+    font-weight: bold;
+    display: inline-block;
+}
+
+/********************************************************
+                    animation one
+********************************************************/
+
+.one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -500px;
+    font-family: 'Cafe24Ssurround';
+    font-size: 90px;
+}
+
+.one span {
+    color: #E74090;
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #7A0040; */
+
+    padding: 0 5px 0 0;
+    opacity: 0;
+    transform: translate(0, -100px) rotate(360deg) scale(0);
+    animation: sweetPotato 1s forwards;
+}
+
+.one span:nth-of-type(1) {
+    animation-delay: 1.05s;
+}
+
+.one span:nth-of-type(2) {
+    animation-delay: 1.15s;
+}
+
+.one span:nth-of-type(3) {
+    animation-delay: 1.25s;
+}
+
+.one span:nth-of-type(4) {
+    animation-delay: 1.35s;
+}
+
+.one span:nth-of-type(5) {
+    animation-delay: 1.45s;
+}
+
+.one span:nth-of-type(6) {
+    animation-delay: 1.65s;
+}
+
+@keyframes sweetPotato {
+    30% {
+        transform: translate(0, -60px) scale(1) rotate(180deg);
+    }
+
+    60% {
+        transform: translate(0, 50px) scale(0.8) rotate(90deg);
+    }
+
+    100% {
+        transform: translate(0) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+
+/********************************************************
+                    animation two
+********************************************************/
+
+.two {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.two img {
+    width: 500px;
+    opacity: 0;
+    animation: PotatoLogo .7s forwards;
+}
+
+.two img:nth-of-type(1) {
+    animation-delay: .8s;
+}
+
+
+@keyframes PotatoLogo {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+}
+
+/********************************************************
+                    animation three
+********************************************************/
+
+.three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.three img {
+    margin-top: 50px;
+    width: 260px;
+    transform: rotate(0deg) scale(0);
+    animation: bell 1s forwards;
+}
+
+.three img:nth-of-type(1) {
+    animation-delay: .1s;
+}
+
+@keyframes bell {
+    0% {
+        transform: scale(0) rotate(20deg);
+    }
+
+    20% {
+        transform: scale(0) rotate(-20deg);
+    }
+
+    40% {
+        transform: scale(1) rotate(20deg);
+    }
+
+    50% {
+        transform: scale(1.5) rotate(-20deg);
+    }
+
+    60% {
+        transform: scale(1.5) rotate(20deg);
+    }
+
+    80% {
+        transform: scale(1) rotate(-20deg);
+    }
+
+    100% {
+        transform: scale(0) rotate(20deg);
+        opacity: 1;
+    }
+}
+
+/********************************************************
+                    animation four
+********************************************************/
+
+.four {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.four img {
+    width: 100px;
+    margin-right: -600px;
+    opacity: 1;
+    transform: translate(0, 0) rotate(-10deg) scale(0);
+    animation: roket 1.5s forwards;
+}
+
+.four img:nth-of-type(1) {
+    animation-delay: 1s;
+}
+
+@keyframes roket {
+    0% {
+        transform: translate(0, 0) rotate(-10deg) scale(1);
+    }
+
+    70% {
+        transform: translate(-700px, -400px) rotate(-10deg) scale(1);
+        /* opacity: 0; */
+    }
+
+    100% {
+        transform: translate(-700px, -400px) rotate(-10deg) scale(1);
+        opacity: 0;
+    }
+}
+
+/********************************************************
+                    animation five
+********************************************************/
+.five {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: -10px; */
+    font-family: 'Cafe24Ssurround';
+    font-size: 40px;
+}
+
+.five span {
+    color: #ffffff;
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #7A0040; */
+
+    padding: 0 5px 0 0;
+    opacity: 0;
+    transform: translate(-50px, -80px) scale(.3);
+    animation: Imagination .5s forwards;
+}
+
+.five span:nth-of-type(1) {
+    animation-delay: 1.90s;
+}
+
+.five span:nth-of-type(2) {
+    animation-delay: 2s;
+}
+
+.five span:nth-of-type(3) {
+    animation-delay: 2.10s;
+}
+
+.five span:nth-of-type(4) {
+    animation-delay: 2.20s;
+}
+
+.five span:nth-of-type(5) {
+    animation-delay: 2.30s;
+    padding-left: 20px;
+}
+
+.five span:nth-of-type(6) {
+    animation-delay: 2.40s;
+}
+
+.five span:nth-of-type(7) {
+    animation-delay: 2.50s;
+    padding-left: 20px;
+}
+
+.five span:nth-of-type(8) {
+    animation-delay: 2.60s;
+}
+
+.five span:nth-of-type(9) {
+    animation-delay: 2.70s;
+}
+
+@keyframes Imagination {
+    40% {
+        transform: translate(20px, 50px) scale(.5);
+        opacity: 1;
+        color: rgb(217, 255, 0);
+    }
+
+    100% {
+        transform: translate(0) scale(1);
+        opacity: 1;
+    }
+}
+
+
+/********************************************************
+                        footer
+********************************************************/
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    /* 원하는 푸터 높이 설정 */
+    background-color: #021531;
+}
+
+#footer-box {
+    height: 100%;
+    text-align: center;
+}
+
+#address {
+    font-family: 'NanumSquareLight';
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    padding: 25px 0 0 0;
+    border-top: solid 1px #fff;
+}
+
+#address li {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#address li span {
+    margin-left: 10px;
+}
+
+
+
+/********************************************************
+                    반응형 (min-width: 390px)
+********************************************************/
+@media all and (min-width: 390px) {
+
+    /* 고구마머리 텍스트 */
+    .one {
+        margin-top: -340px;
+        font-size: 64px;
+    }
+
+    /* 중앙 고구마머리 img */
+    .two {
+        margin-top: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .two img {
+        width: 340px;
+        opacity: 0;
+        animation: PotatoLogo .7s forwards;
+    }
+
+    /* 벨 img */
+    .three img {
+        margin-top: 2px;
+        width: 220px;
+        transform: rotate(0deg) scale(0);
+        animation: bell 1s forwards;
+    }
+
+    /* 상상하는것이즐겁다 */
+    .five {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -55px;
+        font-family: 'Cafe24Ssurround';
+        font-size: 34px;
+    }
+}
+
+
+/********************************************************
+                    반응형 (min-width: 768px)
+********************************************************/
+@media all and (min-width: 768px) {
+
+    /* 고구마머리 텍스트 */
+    .one {
+        margin-top: -420px;
+        font-size: 80px;
+    }
+
+    /* 중앙 고구마머리 img */
+    .two {
+        margin-top: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .two img {
+        width: 420px;
+        opacity: 0;
+        animation: PotatoLogo .7s forwards;
+    }
+
+    /* 벨 img */
+    .three img {
+        margin-top: 40px;
+        width: 240px;
+        transform: rotate(0deg) scale(0);
+        animation: bell 1s forwards;
+    }
+
+    /* 상상하는것이즐겁다 */
+    .five {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -50px;
+        font-family: 'Cafe24Ssurround';
+        font-size: 40px;
+    }
+}
+
+/********************************************************
+                    반응형 (min-width: 1280px)
+********************************************************/
+@media all and (min-width: 1280px) {
+    /* 고구마머리 텍스트 */
+    .one {
+        margin-top: -500px;
+        font-size: 90px;
+    }
+
+    /* 중앙 고구마머리 img */
+    .two {
+        margin-top: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .two img {
+        width: 500px;
+        opacity: 0;
+        animation: PotatoLogo .7s forwards;
+    }
+
+    /* 벨 img */
+    .three img {
+        margin-top: 50px;
+        width: 260px;
+        transform: rotate(0deg) scale(0);
+        animation: bell 1s forwards;
+    }
+
+    /* 상상하는것이즐겁다 */
+    .five {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10px;
+        font-family: 'Cafe24Ssurround';
+        font-size: 40px;
+    }
+}
+
+
+
+/********************************************************
+                        font
+********************************************************/
+
+/* 나눔스퀘어 */
+/* font-family: 'NanumSquare';
+font-family: 'NanumSquareLight';
+font-family: 'NanumSquareExtraBold';
+font-family: 'NanumSquareBold';
+font-family: 'NanumSquareAcR';
+font-family: 'NanumSquareAcL';
+font-family: 'NanumSquareAcEB';
+font-family: 'NanumSquareAcB'; */
+
+
+/* 카페써라운드 */
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

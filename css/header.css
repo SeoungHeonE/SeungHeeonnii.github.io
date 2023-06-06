@@ -1,0 +1,222 @@
+/********************************************************
+                    반응형 (min-width: 390px)
+********************************************************/
+@media all and (min-width: 390px) {
+
+    /* header */
+    header #header-wrap {
+        height: 70px;
+        width: 100%;
+    }
+
+    /* #btn {
+        display: none;
+    } */
+
+    /* 고정 내비 nav */
+    .menu {
+        display: none;
+    }
+
+    #check_box+label {
+        position: relative;
+        display: block;
+        width: 60px;
+        height: 40px;
+        cursor: pointer;
+        /* z-index 추가 */
+        z-index: 2;
+    }
+
+    #side_menu {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #062149;
+        right: -780px;
+        transition: all 800ms;
+        z-index: 1;
+        top: 0px;
+        padding: 100px 0 20px 0;
+        box-sizing: border-box;
+    }
+
+    #side_menu ul li {
+        width: 100%;
+        height: 40px;
+        padding: 40px 0 30px 0;
+        /* border-bottom: 2px dashed #fff; */
+        transition: all 0.4s;
+    }
+
+    #side_menu ul li a {
+        font-family: 'NanumSquare';
+        font-weight: bold;
+        font-size: 30px;
+
+        color: #fff;
+        transition: all 0.4s;
+        text-decoration: none;
+    }
+
+    #side_menu ul li a:hover,
+    #side_menu ul li a:focus,
+    #side_menu ul li a.on {
+        color: #E84191;
+    }
+
+    #side_menu ul li:hover,
+    #side_menu ul li:focus,
+    #side_menu ul li.on {
+        background-color: #021531;
+    }
+
+
+    #check_box:checked+label+#side_menu {
+        right: 0;
+    }
+
+    #check_box {
+        display: none;
+    }
+
+    #check_box+label {
+        position: relative;
+        margin-right: 20px;
+        display: block;
+        width: 40px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    #check_box+label>span {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 5px;
+        background: rgb(255, 255, 255);
+        border-radius: 5px;
+        transition: all 300ms;
+    }
+
+    #check_box:checked+label>span:nth-child(1) {
+        top: 50%;
+        transform: translate(0, -50%);
+        transform: rotate(45deg);
+    }
+
+    #check_box+label>span:nth-child(2) {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    #check_box:checked+label>span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #check_box+label>span:nth-child(3) {
+        bottom: 0;
+    }
+
+    #check_box:checked+label>span:nth-child(3) {
+        top: 50%;
+        transform: translate(0, -50%);
+        transform: rotate(-45deg);
+    }
+
+    /* logo */
+    .Logo img {
+        width: 60px;
+        margin-left: 30px;
+    }
+}
+
+
+/********************************************************
+                    반응형 (min-width: 768px)
+********************************************************/
+@media all and (min-width: 768px) {
+
+    /* 반응형 내비 nav */
+    #btn {
+        display: none;
+    }
+
+    /* header */
+    header #header-wrap {
+        height: 80px;
+        width: 100%;
+    }
+
+    /* logo */
+    .Logo img {
+        width: 70px;
+        margin-left: 70px;
+    }
+
+    /* 고정 nav */
+    .menu {
+        display: flex;
+        padding-left: 0;
+        margin-right: 30px;
+    }
+
+    .menu>li>a {
+        color: #fff;
+        font-family: 'NanumSquare';
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: none;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 8px 30px;
+        text-decoration: none;
+
+        transition: all 0.4s;
+    }
+}
+
+
+/********************************************************
+                    반응형 (min-width: 1280px)
+********************************************************/
+@media all and (min-width: 1280px) {
+
+    /* 반응형 내비 nav */
+    #btn {
+        display: none;
+    }
+
+    /* header */
+    header #header-wrap {
+        height: 90px;
+        width: 100%;
+    }
+
+    /* logo */
+    .Logo img {
+        width: 80px;
+        margin-left: 140px;
+    }
+
+    /* 고정 nav */
+    .menu {
+        display: flex;
+        padding-left: 0;
+        margin-right: 100px;
+    }
+
+    .menu>li>a {
+        color: #fff;
+        font-family: 'NanumSquare';
+        font-weight: 500;
+        font-size: 18px;
+        text-decoration: none;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 8px 30px;
+        text-decoration: none;
+
+        transition: all 0.4s;
+    }
+}
